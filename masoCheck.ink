@@ -1,7 +1,7 @@
 # author: BlueMap1e
 // 「受虐癖自查」MasoCheck
 VAR score = 0
-->CHECK_START
+-> CHECK_START
 
 
 
@@ -11,17 +11,17 @@ VAR score = 0
 <strong>\#NSFW警告</strong>
 该测试可能包含一些不适合学习或工作时间查看的内容，请确认周边环境足够安全后，再打开该测试。
 该测试可能包含一些R-18G、重口向内容，如果引起不适，请立刻退出测试。
-+ 开始测试 -> START_TEST
++ [开始测试] -> START_TEST
 -> DONE
 
 === START_TEST ===
 <br>
     测试现在开始，首先是轻口内容。
+    其中大部分应该是属于正常XP或轻口M。
     
-<h4>轻口</h4>
--> Light
++ [我准备好了，开始测试]-> Light
 
-= Light
+=== Light ===
 VAR lightNum = 22
 VAR lightCount = 0
 ({lightCount+1}/{lightNum})请问您可以接受<strong>"{!恋足癖|恋袜癖|催眠|色诱|寸止|蒙眼|舔耳|轻微羞辱|恋手癖|恋臀癖|调教|力量汲取|洗脑|思维引导|命令服从|忍耐寸止|射精管理|素股|榨精|挠痒|舔足|口水}"</strong>吗？
@@ -35,7 +35,7 @@ VAR lightCount = 0
 {   lightCount == lightNum:
         你目前得分<strong>{score}</strong>分。
     <h4>中等</h4>
-    ->Medium
+    -> toMedium
 }
 -> Light
 
@@ -48,7 +48,7 @@ VAR lightCount = 0
 {   lightCount == lightNum:
         你目前得分<strong>{score}</strong>分。
     <h4>中等</h4>
-    ->Medium
+    -> toMedium
 }
 -> Light
 
@@ -61,7 +61,7 @@ VAR lightCount = 0
 {   lightCount == lightNum:
         你目前得分<strong>{score}</strong>分。
     <h4>中等</h4>
-    ->Medium
+    -> toMedium
 }
 -> Light
 
@@ -74,7 +74,7 @@ VAR lightCount = 0
 {   lightCount == lightNum:
         你目前得分<strong>{score}</strong>分。
     <h4>中等</h4>
-    ->Medium
+    -> toMedium
 }
 -> Light
 
@@ -82,11 +82,21 @@ VAR lightCount = 0
 {   lightCount == lightNum:
         你目前得分<strong>{score}</strong>分。
     <h4>中等</h4>
-    ->Medium
+    -> toMedium
 }
 -> Light
 
-= Medium
+=== toMedium ===
+    接下来是中等程度的一些测试。
+    如果在轻口测试中，已经出现大量不了解或不能接受的XP。
+    可以考虑直接结束测试，查看结果。
+    要继续吗？
+    
+    + [继续测试] -> Medium
+    + [结束测试] -> Result
+
+
+==== Medium ===
 
 VAR mediumNum = 29
 VAR mediumCount = 0
@@ -101,7 +111,7 @@ VAR mediumCount = 0
 {   mediumCount == mediumNum:
         你目前得分<strong>{score}</strong>分。
     <h4>重口</h4>
-    -> Spicy
+    -> toSpicy
 }
 -> Medium
 
@@ -114,7 +124,7 @@ VAR mediumCount = 0
 {   mediumCount == mediumNum:
         你目前得分<strong>{score}</strong>分。
     <h4>重口</h4>
-    -> Spicy
+    -> toSpicy
 }
 -> Medium
 
@@ -127,7 +137,7 @@ VAR mediumCount = 0
 {   mediumCount == mediumNum:
         你目前得分<strong>{score}</strong>分。
     <h4>重口</h4>
-    -> Spicy
+    -> toSpicy
 }
 -> Medium
 
@@ -140,7 +150,7 @@ VAR mediumCount = 0
 {   mediumCount == mediumNum:
         你目前得分<strong>{score}</strong>分。
     <h4>重口</h4>
-    -> Spicy
+    -> toSpicy
 }
 -> Medium
 
@@ -148,11 +158,21 @@ VAR mediumCount = 0
 {   mediumCount == mediumNum:
         你目前得分<strong>{score}</strong>分。
     <h4>重口</h4>
-    -> Spicy
+    -> toSpicy
 }
 -> Medium
 
-= Spicy
+=== toSpicy ===
+    接下来是一些重口测试，有一定可能会引起你的不适。
+    如果在中等测试中已经出现大量不了解/接受不了的情况，
+    可以考虑直接退出测试，查看结果。
+    要继续吗？
+
+    + [继续测试] -> Spicy
+    + [结束测试] -> Result
+
+
+=== Spicy ===
 
 VAR spicyNum = 34
 VAR spicyCount = 0
@@ -168,7 +188,7 @@ VAR spicyCount = 0
 {   spicyCount == spicyNum:
         你目前得分<strong>{score}</strong>分。
     <h4>危险</h4>
-    -> Danger
+    -> toDanger
 }
 -> Spicy
 
@@ -181,7 +201,7 @@ VAR spicyCount = 0
 {   spicyCount == spicyNum:
         你目前得分<strong>{score}</strong>分。
     <h4>危险</h4>
-    -> Danger
+    -> toDanger
 }
 -> Spicy
 
@@ -194,7 +214,7 @@ VAR spicyCount = 0
 {   spicyCount == spicyNum:
         你目前得分<strong>{score}</strong>分。
     <h4>危险</h4>
-    -> Danger
+    -> toDanger
 }
 -> Spicy
 
@@ -207,7 +227,7 @@ VAR spicyCount = 0
 {   spicyCount == spicyNum:
         你目前得分<strong>{score}</strong>分。
     <h4>危险</h4>
-    -> Danger
+    -> toDanger
 }
 -> Spicy
 
@@ -215,11 +235,23 @@ VAR spicyCount = 0
 {   spicyCount == spicyNum:
         你目前得分<strong>{score}</strong>分。
     <h4>危险</h4>
-    -> Danger
+    -> toDanger
 }
 -> Spicy
 
-= Danger
+
+=== toDanger ===
+    接下来的一些XP可能让许多M男都难以接受，可能让你感到不适。
+    如果在重口的测试中已经有大量的不了解/无法接受的选项，
+    建议直接退出测试。
+    当然，也可以选择继续测试。
+    要继续吗？
+
+    + [继续测试] -> Danger
+    + [结束测试] -> Result
+
+
+=== Danger ===
 
 VAR dangerNum = 12
 VAR dangerCount = 0
@@ -276,7 +308,7 @@ VAR dangerCount = 0
 }
 -> Danger
 
-= Result
+=== Result ===
 <h4>总分：<strong>{score}</strong></h4>
 {   score <= 40:
         <h4>纯良/非M<h4>
@@ -309,7 +341,7 @@ VAR dangerCount = 0
     -> DONE
 }
 
-= Epilogue
+=== Epilogue ===
     感谢各位参与这个并不严肃的测试，它还有很多需要完善的地方。
     希望你们玩得开心。本自测就到此结束了，再见。
     
